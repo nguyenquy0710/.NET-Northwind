@@ -1,0 +1,234 @@
+﻿
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', 'Arial', '.VnTime';
+}
+
+body {
+    width: 100%;
+    min-height: 300px;
+    background-image: url(/Image/background.png);
+}
+
+#top {
+    width: 100%;
+    height: 25px;
+    text-align: right;
+    line-height: 25px;
+    position: fixed;
+    top: 0px;
+    background-color: #646060;
+}
+
+    #top > #view {
+        float: left;
+        margin-left: 8%;
+    }
+
+    #top > #tk {
+        float: right;
+        margin-right: 4%;
+    }
+
+#header {
+    clear: both;
+    width: 100%;
+    height: 150px;
+    margin-top: 2%;
+    background-color: red;
+}
+
+    #header > img {
+        width: 100%;
+        height: 100%;
+    }
+
+#content {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+    #content #left {
+        float: left;
+        width: 20%;
+        margin: 0.5% 0px;
+        border-radius: 4px;
+    }
+
+        #content #left > .khungChucNang > ul > li > a {
+            color: black;
+            padding-left: 10%;
+            line-height: 25px;
+            display: block;
+        }
+
+            #content #left > .khungChucNang > ul > li > a:hover {
+                color: red;
+                font-weight: bold;
+                border-radius: 4px;
+                background-color: yellow;
+                animation-delay: 10s;
+                -moz-animation-delay: 10s;
+                -webkit-animation-delay: 10s;
+                -o-animation-delay: 10s;
+            }
+
+            #content #left > .khungChucNang > ul > li > a:active {
+                color: white;
+                background-color: black;
+                font-weight: bold;
+                border-radius: 4px;
+                animation-delay: 10s;
+                -moz-animation-delay: 10s;
+                -webkit-animation-delay: 10s;
+                -o-animation-delay: 10s;
+            }
+
+    #content #right {
+        float: right;
+        width: 79%;
+        margin: 0.5% 0px 5% 0px;
+        border-radius: 4px;
+    }
+
+#footer {
+    clear: both;
+    width: 100%;
+    height: 50px;
+    margin-top: 4px;
+    /*position: fixed;*/
+    /*bottom: 0%;*/
+    background-color: rgba(100, 96, 96, 0.60);
+}
+
+    #footer > p {
+        text-align: center;
+        font-size: 20px;
+        line-height: 50px;
+    }
+
+        #footer > p > a {
+            color: black;
+        }
+
+.title {
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 35px;
+    color: red;
+    /*background-color:red;*/
+}
+
+.khungChucNang {
+    border-radius: 4px;
+    border: 1px dotted black;
+}
+
+
+.ql {
+    font-size: 40px;
+}
+
+.table {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px dotted black;
+}
+
+    .table .cot1 {
+        width: 25%;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .table tr {
+        height: 50px;
+    }
+
+        .table tr td {
+            border-radius: 4px;
+            border: 1px dotted black;
+            line-height: 50px;
+        }
+
+.khungEdit tr td {
+    padding-left: 4%;
+}
+
+    .khungEdit tr td input[type="text"], .khungEdit tr td h2, .khungEdit tr td textarea, .khungEdit tr td select {
+        line-height: 30px;
+        font-size: 100%;
+        width: 90%;
+    }
+
+    .khungEdit tr td input[type="file"] {
+        margin-left: 30%;
+    }
+
+    .khungEdit tr td img {
+        width: 90%;
+    }
+
+    .khungEdit tr td .nut {
+        display: inline;
+        margin-left: 11%;
+    }
+
+    .khungEdit tr td input[type="submit"], .khungEdit tr td input[type="reset"], .khungEdit tr td label {
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: bold;
+    }
+
+    .khungEdit tr td input[type="checkbox"] {
+        line-height: 40px;
+        font-weight: bold;
+    }
+
+    .khungEdit tr td input[type="submit"]:hover, .khungEdit tr td input[type="reset"]:hover {
+        background-color: yellow;
+        color: red;
+    }
+
+    .khungEdit tr td input[type="submit"]:active, .khungEdit tr td input[type="reset"]:active {
+        background-color: black;
+        color: white;
+    }
+
+.table tr td {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+    .table tr td a {
+        color: #0026ff;
+    }
+
+.xoa {
+    width: 2%;
+}
+
+.iconDel {
+    width: 50%;
+    margin: 7% 30px 0px -10%;
+    border-radius: 8px;
+}
+
+.back2top {
+    position: fixed;
+    right: 3%;
+    bottom: 15%;
+    border-radius: 50%;
+    width: 3%;
+}
+
+.search {
+    border-radius: 100%;
+    margin: 0px 0.5% 5% 0;
+}

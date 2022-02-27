@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="mainController">
+        Ban ten gi? &nbsp; <input ng-model ="hoTen" />
+        <p>{{hoTen|uppercase}}</p>
+        <ul>
+            <li ng-repeat="sv in sinhVien|orderBy:'ten'">
+                {{sv.ten +', '+sv.lop}}
+            </li>
+        </ul>
+        <p>Hom nay ngay: {{homNay}}</p>
+    </div>
+    <div ng-controller="timMaxController">
+        <input type="text" ng-model="a" />
+        <input type="text" ng-model="b" />
+        <input type="text" ng-model="c" />
+        <p>{{timMax(a,b,c)}}</p>
+    </div>
+</body>
+</html>

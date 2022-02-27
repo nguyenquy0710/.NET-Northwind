@@ -1,0 +1,249 @@
+﻿* {
+    margin: 0px;
+    padding: 0;
+    font-family: 'Times New Roman',Arial;
+}
+
+#container {
+    position: relative;
+    background: #ffffff url(../Image/background.png);
+    border: 1px #000 solid;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-repeat: no-repeat;
+}
+
+/*Header*/
+
+#header {
+    background-image: url(../Image/banner.jpg);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(255,0,0);
+    text-align: center;
+}
+
+/*menu*/
+
+#menu {
+    float: left;
+    font: normal bold 14px/40px verdana, sans-serif;
+    overflow: hidden;
+    position: relative;
+    /*position:fixed;*/
+    height: 60px;
+}
+
+    #menu #shadow {
+        -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+        -o-box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+        background: #888;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+        height: 10px;
+        left: 5%;
+        position: absolute;
+        top: -9px;
+        width: 90%;
+        z-index: 100;
+    }
+
+    #menu #back {
+        -moz-transition-duration: .4s;
+        -o-transition-duration: .4s;
+        -webkit-transition-duration: .4s;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 0;
+        width: 100%;
+    }
+
+    #menu:hover div#back {
+        height: 250px;
+    }
+
+ul#menu1 {
+    display: block;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0 125px;
+    position: relative;
+}
+
+    ul#menu1 li {
+        float: left;
+        margin: 0 5px 0 0;
+    }
+
+        ul#menu1 li > a {
+            -moz-border-radius: 0 0 10px 10px;
+            -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            -moz-transition: all 0.2s ease-in-out;
+            -o-border-radius: 0 0 10px 10px;
+            -o-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            -o-transition: all 0.2s ease-in-out;
+            -webkit-border-bottom-left-radius: 10px;
+            -webkit-border-bottom-right-radius: 10px;
+            -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            -webkit-transition: all 0.2s ease-in-out;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            color: #eee;
+            display: block;
+            padding: 0 10px;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        ul#menu1 li a.red {
+            background: #a00;
+        }
+
+        ul#menu1 li a.orange {
+            background: #da0;
+        }
+
+        ul#menu1 li a.green {
+            background: #060;
+        }
+
+        ul#menu1 li a.violet {
+            background: #682bc2;
+        }
+
+
+        ul#menu1 li:hover > a, ul#menu1 li > a:hover {
+            background: #aaa;
+            color: #fff;
+            padding: 10px 10px 0;
+        }
+
+        ul#menu1 li a.red:hover, ul#menu1 li:hover a.red {
+            background: #c00;
+        }
+
+        ul#menu1 li a.orange:hover, ul#menu1 li:hover a.orange {
+            background: #fc0;
+        }
+
+        ul#menu1 li a.green:hover, ul#menu1 li:hover a.green {
+            background: #080;
+        }
+
+        ul#menu1 li a.violet:hover, ul#menu1 li:hover a.violet {
+            background: #8a2be2;
+        }
+
+/*Content*/
+
+#content {
+    width: 100%;
+    height: 500px;
+    clear: both;
+}
+
+    #content #left {
+        width: 20%;
+        line-height: 30px;
+        height: 30px;
+        float: left;
+        text-align: center;
+        /*box-shadow:5px 5px 5px grey;*/
+        border-radius: 0 0 5px 5px;
+        -webkit-box-shadow: 0 0 10px #eee;
+        box-shadow: 2px 2px 1px #000;
+        /*--------*/
+        background: -webkit-linear-gradient(red, yellow, green); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(red, yellow, green); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(red, yellow, green); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(red, yellow, green);
+    }
+
+        #content #left ul {
+            /*background-color:rgba(0, 0, 0, 0.5);
+         border-radius: 0 0 10px 10px;*/
+            width: 100%;
+        }
+
+            #content #left ul li {
+                list-style: none;
+                height: 25px;
+                background-color: #da0;
+                margin-top: 4px;
+                padding-top: 4px;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 2px 2px 1px #000;
+                width: 90%;
+                text-align: center;
+                padding-left: 10px;
+            }
+
+                #content #left ul li:hover {
+                    color: white;
+                    background-color: #fc0;
+                }
+
+                #content #left ul li:active {
+                    background-color: black;
+                }
+
+                #content #left ul li .lbtnDM {
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 0 0 5px 5px;
+                    color: white;
+                }
+
+    #content #middle {
+        width: 60%;
+        float: left;
+        text-align: center;
+        margin: auto;
+    }
+
+    #content #right {
+        width: 20%;
+        float: right;
+        text-align: center;
+    }
+
+        #content #right .h3 {
+            line-height: 30px;
+            height: 30px;
+            background-color: #ff6a00;
+            border-radius: 5px 5px;
+            -webkit-box-shadow: 0 0 10px #da0;
+            /*--------------------*/
+            background: red; /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(red, yellow);
+        }
+       
+/*footer*/
+
+#footer {
+    text-align: center;
+    clear: both;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    background: url(../Image/footer.jpg);
+}
+
+    #footer ul li {
+        list-style: none;
+        line-height: 30px;
+        color: #ffffff;
+    }
+
+        #footer ul li a {
+            text-decoration: none;
+            display: block;
+            color: white;
+        }

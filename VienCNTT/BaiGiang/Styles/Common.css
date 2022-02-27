@@ -1,0 +1,160 @@
+﻿* { /*tat ca cac phan tu*/
+    margin: 0px;
+    padding: 0;
+    font-family: 'Times New Roman',Arial;
+}
+
+#container {
+    margin: auto;
+    width: 1024px;
+}
+
+#header {
+    height: 100px;
+    width: 100%;
+    background-image: url('../Hinh/Layout/banner.jpg');
+    background-repeat: repeat-x;
+}
+
+#footer {
+    clear: both;
+    height: 120px;
+    background-color: orange;
+    width: 100%;
+}
+
+    #footer ul li {
+        list-style: none;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+    }
+
+#menu {
+    height: 40px;
+    background-color: blue;
+    width: 100%;
+}
+
+    #menu ul li {
+        list-style: none;
+        width: 200px;
+        float: left;
+        text-align: center;
+    }
+
+        #menu ul li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            line-height: 40px;
+        }
+
+            #menu ul li a:hover {
+                color: blue;
+                background-color: white;
+            }
+
+#content {
+    clear: both;
+    width: 100%;
+}
+
+    #content #left {
+        width: 25%;
+        float: left;
+    }
+
+    #content #right {
+        width: 25%;
+        float: left;
+    }
+
+    #content #middle {
+        width: 50%;
+        float: left;
+    }
+
+table {
+    width: 100%;
+}
+
+#content #left ul li {
+    list-style: none;
+}
+
+    #content #left ul li a {
+        display: block;
+        background-color: green;
+        color: white;
+        padding-left: 10px;
+        line-height: 40px;
+        height: 40px;
+        text-decoration: none;
+    }
+
+        #content #left ul li a:hover {
+            background-color: lightcyan;
+            color: green;
+        }
+
+#content #middle .sanpham li {
+    list-style: none;
+    text-align: center;
+}
+#content #middle .dinhdangbang {
+    width:100%;
+}
+    #content #middle .dinhdangbang td {
+        line-height:30px;
+    }
+#content #middle .dinhdangbang input[type='text']
+,#content #middle .dinhdangbang textarea
+,#content #middle .dinhdangbang input[type='password']
+{
+    width:95%;
+    height:30px;
+}
+    #content #middle .dinhdangbang textarea {
+        height:100px;
+    }
+#content #middle .sanpham {
+    width: 95%;
+    border: 1px solid lightgreen;
+    margin: 5px;
+    
+}
+
+    #content #middle .sanpham li img {
+        height: 90%;
+        width: 230px;
+        border-radius: 3px;
+        border: 1px solid gray;
+    }
+
+.phantrang {
+    text-align: center;
+    width: 100%;
+}
+
+    .phantrang li {
+        float: left;
+        width: 33%;
+        list-style: none;
+    }
+
+.chitietsp {
+    width: 100%;
+    padding: 5px 5px 0px 20px;
+}
+
+    .chitietsp li {
+        list-style: none;
+    }
+
+        .chitietsp li img {
+            width:70%;
+            border: 1px solid gray;
+            border-radius: 3px;
+            
+        }

@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontEnd.master.cs" Inherits="FrontEnd" %>
+
+<%@ Register Src="~/DanhMuc.ascx" TagPrefix="uc1" TagName="DanhMuc" %>
+<%@ Register Src="~/DangNhap.ascx" TagPrefix="uc1" TagName="DangNhap" %>
+<%@ Register Src="~/QLTruyCap.ascx" TagPrefix="uc1" TagName="QLTruyCap" %>
+<%@ Register Src="~/ThongTinGioHang.ascx" TagPrefix="uc1" TagName="ThongTinGioHang" %>
+<%@ Register Src="~/TimKiem.ascx" TagPrefix="uc1" TagName="TimKiem" %>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder runat="server" ID="cphTitle"></asp:ContentPlaceHolder>
+        <asp:Literal runat="server" ID="ltlTitle"> - Slogans of website</asp:Literal>
+    </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="~/img/favicon.ico" />
+
+    <link href="Style/Common.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmContent" runat="server">
+        <asp:ScriptManager runat="server" ID="scmCommon"></asp:ScriptManager>
+        <div id="container">
+            <div id="header">
+            </div>
+            <div id="menu">
+                <ul id="menu1">
+                    <li>
+                        <a href="/" class="red" title="trang chủ">Home</a>
+                    </li>
+                    <li>
+                        <a href="/sanpham" class="violet" title="sản phẩm">Sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="/gioithieu" class="green" title="giới thiệu">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="/lienhe" class="orange" title="liên hệ">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <div id="left">
+                    <h3>Danh mục sản phẩm</h3>
+                    <uc1:DanhMuc runat="server" ID="ucDanhMuc" />
+                </div>
+                <div id="middle">
+                    <asp:ContentPlaceHolder runat="server" ID="cphMiddle"></asp:ContentPlaceHolder>
+                </div>
+                <div id="right">
+                    <uc1:TimKiem runat="server" ID="ucTimKiem" />
+                    <h3 class="h3">Đăng nhập</h3>
+                    <uc1:DangNhap runat="server" ID="ucDangNhap" OnevtDangKy="ucDangNhap_evtDangKy" />
+                    <h3 class="h3">Thông tin giỏ hàng</h3>
+                    <asp:UpdatePanel runat="server">
+                        <ContentTemplate>
+                            <uc1:ThongTinGioHang runat="server" ID="ucThongTinGioHang" />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    <uc1:QLTruyCap runat="server" ID="ucQLTruyCap" />
+                </div>
+            </div>
+            <div id="footer">
+                <ul>
+                    <li>Dia Chi: 70 To Ky - Tan Chanh Hiep - Q.12 - Tp HCM</li>
+                </ul>
+                <ul>
+                    <li>Phone: 0949596420 - 01652958506
+                    </li>
+                </ul>
+                <ul>
+                    <li>Email: vantaipy@gmail.com
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">nguyentai.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="back"></div>
+            <div id="shadow"></div>
+            <div style="clear: both"></div>
+        </div>
+    </form>
+</body>
+</html>

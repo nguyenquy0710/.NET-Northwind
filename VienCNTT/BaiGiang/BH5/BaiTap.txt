@@ -1,0 +1,5 @@
+﻿Xay dung mo hinh su kien cho bai toan:
+DaiHoc truyen su kien cho cac SinhVien
+- Co 1 danh sach vai hoc phan cho hoc he
+- Dang ky hoc he, chi danh cho sv bi rot
+hoc phan do.

@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#"
+    AutoEventWireup="true"
+    CodeFile="FrontEnd.master.cs"
+    Inherits="FrontEnd" %>
+
+<%@ Register Src="~/DangNhap.ascx" TagPrefix="uc1" TagName="DangNhap" %>
+<%@ Register Src="~/ThongTinGH.ascx" TagPrefix="uc1" TagName="ThongTinGH" %>
+<%@ Register Src="~/DM.ascx" TagPrefix="uc1" TagName="DM" %>
+<%@ Register Src="~/TimKiem.ascx" TagPrefix="uc1" TagName="TimKiem" %>
+
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder runat="server"
+        ID="cphHead">
+    </asp:ContentPlaceHolder>
+    <link href="Styles/Common.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server"
+            ID="srmCommon">
+        </asp:ScriptManager>
+        <div id="container">
+            <div id="header"></div>
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a href="/">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="/sanpham">Sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="/dichvu">Dịch vụ</a>
+                    </li>
+                    <li>
+                        <a href="/lienhe">Liên hệ</a>
+                    </li>
+                    <li>
+                        <a href="/tintuc">Tin tức</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <div id="left">
+                    <uc1:DM runat="server" ID="DM" />
+                </div>
+                <div id="middle">
+                    <asp:ContentPlaceHolder runat="server"
+                        ID="cphMiddle">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="right">
+                    <uc1:TimKiem runat="server" ID="TimKiem" />
+                    <uc1:DangNhap runat="server" ID="ucDangNhap"
+                        OnevtDangKy="ucDangNhap_evtDangKy" />
+                    <asp:UpdatePanel runat="server">
+                        <ContentTemplate>
+                            <uc1:ThongTinGH runat="server" ID="ucThongTinGH" />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </div>
+            <div id="footer">
+                <table>
+                    <tr>
+                        <td>
+                            <ul style="width: 50%;">
+                                <li>Địa chỉ: Ngõ 70, Tô Ký, TCH, Q.12, Tp.HCM
+                                </li>
+                                <li>Điện thoại: 08123456; Fax: 08654321
+                                </li>
+                                <li>Email: khongbiet.gmail.com
+                                </li>
+                                <li>Website: <a href='/'>daxong.com.vn
+                                </a>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Online &nbsp;
+                                <span runat="server" id="spnOnline"></span>
+                                </li>
+                                <li>Sum &nbsp;
+                                <span runat="server" id="spnSum"></span>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>

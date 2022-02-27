@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    
+</head>
+<body>
+    <p id="kq"></p>
+    <script type="text/javascript">
+        var ref = new Firebase("https://docs-examples.firebaseio.com/web/saving-data/chat");
+        
+        ref.push({hoTen:'teo'});
+        ref.on("child_added", function (snapshot) {
+            document.getElementById('kq').innerHTML = snapshot.val().hoTen;
+        },
+        function (errorObject) {
+            document.getElementById('kq').innerHTML = "Loi: " + errorObject.code;
+        });
+    </script>
+</body>
+</html>

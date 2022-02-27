@@ -1,0 +1,81 @@
+﻿* { /*tat ca cac phan tu*/
+    margin: 0px;
+    padding: 0;
+    font-family: 'Times New Roman',Arial;
+}
+
+#container {
+    margin: auto;
+    width: 1024px;
+}
+
+#header {
+    height: 100px;
+    background-color: green;
+    width: 100%;
+    background-image: url('banner.jpg');
+    background-repeat: repeat-x;
+}
+
+#footer {
+    clear: both;
+    height: 120px;
+    background-color: orange;
+    width: 100%;
+}
+
+    #footer ul li {
+        list-style: none;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+    }
+
+#menu {
+    height: 40px;
+    background-color: blue;
+    width: 100%;
+}
+
+    #menu ul li {
+        list-style: none;
+        width: 200px;
+        float: left;
+        text-align: center;
+    }
+
+        #menu ul li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            line-height: 40px;
+        }
+
+            #menu ul li a:hover {
+                color: blue;
+                background-color: white;
+            }
+
+#content {
+    clear: both;
+    height: 500px;
+    width: 100%;
+}
+
+    #content #left {
+        width: 25%;
+        height: 500px;
+        float: left;
+    }
+
+    #content #right {
+        width: 25%;
+        height: 500px;
+        float: left;
+    }
+
+    #content #middle {
+        height: 500px;
+        width: 50%;
+        float: left;
+    }

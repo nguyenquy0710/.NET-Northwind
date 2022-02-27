@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/app.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="chatChit">
+        Thong bao hien tai:<br />
+        {{msg}}
+        <form ng-submit="updateMessage()">
+            <input type="text" ng-model="newMsg" placeholder="Nhap thong bao moi" />
+            <input type="submit" value="Cap nhat thong bao" />
+        </form>
+    </div>
+</body>
+</html>

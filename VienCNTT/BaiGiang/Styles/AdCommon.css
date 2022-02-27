@@ -1,0 +1,80 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#container {
+    width: 1024px;
+    margin: auto;
+}
+
+#header {
+    height: 100px;
+    background-color: blue;
+}
+    #header ul {
+        position:absolute;
+        left:900px;
+        top:60px;
+    }
+    #header ul li {
+        list-style:none;
+        float:right;
+        width:100px;
+        
+    }
+
+        #header ul li a {
+            color: white;
+        }
+
+#footer {
+    clear: both;
+    height: 100px;
+    background-color: green;
+}
+
+#content #left {
+    width: 25%;
+    float: left;
+}
+
+    #content #left a {
+        display: block;
+        line-height: 40px;
+        height: 40px;
+        padding-left: 20px;
+        text-decoration: none;
+        background-color: lightgray;
+    }
+
+        #content #left a:hover {
+            background-color: white;
+        }
+
+#content #right {
+    width: 75%;
+    float: left;
+}
+/*for admin content pages*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    table .cot1 {
+        width: 20%;
+    }
+
+    table tr td {
+        border: 1px dotted gray;
+        height: 35px;
+    }
+
+    table input[type='text'], table textarea {
+        width: 100%;
+    }
+
+    table input[type='text'] {
+        height: 35px;
+    }

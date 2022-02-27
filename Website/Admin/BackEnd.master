@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BackEnd.master.cs" Inherits="Admin_BackEnd" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder runat="server" ID="cphTitle"></asp:ContentPlaceHolder>
+        <asp:Literal runat="server" ID="ltlTitle"> - Báo Cáo Kết Thúc Môn Lập Trình Website DOTNET</asp:Literal>
+    </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+
+    <script src="../Scripts/jquery-2.2.2.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.min.js"></script>
+    <script src="../Scripts/locales/bootstrap-datepicker.vi.min.js"></script>
+
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+    <link href="css/StyleTag.css" rel="stylesheet" />
+    <link href="css/AdCommon.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //dinh dang lua chon ngay gio
+            $('.ngay').datepicker(
+                {
+                    'language': 'vi',
+                    'format': 'dd/mm/yyyy'
+                });
+            $(function () {
+                //con xuong duoi 300px thi hien nut TOP
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() >= 300) $('.back2top').fadeIn();
+                    else $('.back2top').fadeOut();
+                });
+                //nut TOP duoc click se chay cham ve dau trang
+                $('.back2top').click(function () {
+                    $('body,html').animate({ scrollTop: 0 }, 'slow');
+                });
+            });
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmContent" runat="server">
+        <%--<asp:ScriptManager runat="server" ID="scmAdCommon"></asp:ScriptManager>--%>
+        <asp:ScriptManager runat="server" ID="srmCommon"></asp:ScriptManager>
+        <div>
+            <div id="top">
+                <div id="view">
+                    <asp:LinkButton runat="server" ID="lbtnView" OnClick="lbtnView_Click">Trang Chủ</asp:LinkButton>
+                </div>
+                <div id="tk">
+                    <asp:LinkButton runat="server" ID="lbtnTaiKhoan" OnClick="lbtnTaiKhoan_Click">Tài Khoản</asp:LinkButton>
+                    &nbsp;|&nbsp;
+                <asp:LinkButton runat="server" ID="lbtnDangXuat" OnClick="lbtnDangXuat_Click">Đăng Xuất</asp:LinkButton>
+                </div>
+            </div>
+            <div id="header">
+                <asp:Image runat="server" ImageUrl="~/Image/banner.jpg" />
+            </div>
+            <div id="content">
+                <div id="left">
+                    <asp:Panel GroupingText=" " runat="server">
+                        <asp:TextBox runat="server" ID="txtSeach" PlaceHolder="Nội Dung Tìm Kiếm" Width="75%"></asp:TextBox>
+                        <asp:ImageButton runat="server" CssClass="search" ID="ibtnSearch" AlternateText="Search" ImageUrl="~/Image/Layout/search.png" OnClick="ibtnSearch_Click" Width="15%" />
+                    </asp:Panel>
+                    <div class="khungChucNang">
+                        <div class="title">Danh mục quản lý</div>
+                        <ul>
+                            <li>
+                                <a href="/admin" runat="server">Drashboard</a>
+                            </li>
+                            <li>
+                                <a href="/admin/nhanvien">Quản Lý Nhân Viên</a>
+                            </li>
+                            <li>
+                                <a href="/admin/danhmuc" runat="server" id="DM">Quản Lý Danh Mục</a>
+                            </li>
+                            <li>
+                                <a href="/admin/sanpham">Quản Lý Sản Phẩm</a>
+                            </li>
+                            <li>
+                                <a href="/admin/hoadon">Quản Lý Hoá Đơn</a>
+                            </li>
+                            <%--<li>
+                                <a href="/admin/khachhang">Quản Lý Khách Hàng</a>
+                            </li>--%>
+                            <%--<li>
+                                <a href="/admin/nhacungcap">Quản Lý Nhà Cung Cấp</a>
+                            </li>--%>
+                            <li>
+                                <a href="/admin/phanquyen" runat="server" id="aQLPQ">Quản Lý Phân Quyền</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="right">
+                    <asp:ContentPlaceHolder runat="server" ID="cphContent"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="footer">
+                <p>
+                    Copyright &copy; 2016 &nbsp;|&nbsp;
+                    <a href="/trangchu">nguyentai.com</a>
+                </p>
+            </div>
+        </div>
+    </form>
+    <div>
+        <asp:Image runat="server" CssClass="back2top" ID="imgTop" ImageUrl="~/Image/Layout/BackToTop.jpg" />
+    </div>
+</body>
+</html>

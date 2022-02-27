@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BackEnd.master.cs" Inherits="Admin_BackEnd" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="../Scripts/jquery-2.2.2.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap-datepicker.min.js"></script>
+    <script src="../Scripts/locales/bootstrap-datepicker.vi.min.js"></script>
+
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+    <link href="../Styles/AdCommon.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ngay').datepicker(
+                {
+                    'language': 'vi',
+                    'format': 'dd/mm/yyyy'
+                }
+                );
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="Header" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frmContainer" runat="server">
+        <div id="container">
+            <div id="header">
+                <ul>
+                    <li>
+                        <asp:LinkButton runat="server"
+                            ID="lbtnTK"
+                            OnClick="lbtnTK_Click">Tài khoản</asp:LinkButton>
+                    </li>
+                    <li>
+                        <asp:LinkButton runat="server"
+                            ID="lbtnDX"
+                            OnClick="lbtnDX_Click">Đăng xuất</asp:LinkButton>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <div id="left">
+                    <asp:LinkButton runat="server"
+                        ID="lbtnQLDM"
+                        OnClick="lbtnQLDM_Click">
+                        Quản lý danh mục
+                    </asp:LinkButton>
+                    <asp:LinkButton runat="server"
+                        OnClick="lbtnQLSP_Click"
+                        ID="lbtnQLSP">
+                        Quản lý sản phẩm
+                    </asp:LinkButton>
+                    <asp:LinkButton runat="server"
+                        ID="lbtnQLHD">
+                        Quản lý hóa đơn
+                    </asp:LinkButton>
+                    <asp:LinkButton runat="server"
+                        ID="btnQLKH">
+                        Quản lý khách hàng
+                    </asp:LinkButton>
+                </div>
+                <div id="right">
+                    <asp:ContentPlaceHolder ID="RightContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="footer"></div>
+        </div>
+    </form>
+</body>
+</html>
